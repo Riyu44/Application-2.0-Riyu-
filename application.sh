@@ -35,6 +35,13 @@ echo "if you are interested in any of the below subjects press 4"
 echo "Create a bucketlist - Let's create a bucketlist"
 echo "Nasa images - let's explore space"
 
+echo
+echo
+
+echo "if you are interested in any of the below subjects press 5"
+echo "Let's play a card game"
+echo "Want to get gisty with dictionary? Let's get started"
+
 read -p "Enter your choice: " choice
 
 if [ $choice -eq 1 ]
@@ -44,20 +51,20 @@ echo "Newspaper - articles, movies and books - type 1"
 echo "Countries - countries, currencies and capital cities - type 2"
 echo "Numbers - trivia on dates, years and numbers - type 3"
 echo "Jokes - Let's have a laugh - type 4"
-read -p "Enter your choice: " choice
-if [ $choice -eq 1 ]
+read -p "Enter your choice: " choicea
+if [ $choicea -eq 1 ]
 then
 ./riyu44/newspaper.sh
 fi
-if [ $choice -eq 2 ]
+if [ $choicea -eq 2 ]
 then
 ./riyu44/countries.sh
 fi
-if [ $choice -eq 3 ]
+if [ $choicea -eq 3 ]
 then
 ./riyu44/numbers.sh
 fi
-if [ $choice -eq 4 ]
+if [ $choicea -eq 4 ]
 then
 ./riyu44/joke.sh
 fi
@@ -70,20 +77,20 @@ echo "Bored - Let's do something fun, get suggestions - type 1"
 echo "Memes - Want to make a fun meme or want to see some memes, let's get started - type 2"
 echo "Food - Get a recipe to make your favourite dish - type 3"
 echo "cocktail - Let's get brewing trivia, shall we? - type 4"
-read -p "Enter your choice: " choice
-if [ $choice -eq 1 ]
+read -p "Enter your choice: " choiceb
+if [ $choiceb -eq 1 ]
 then
 ./TusharApis/BoredAPI.sh
 fi
-if [ $choice -eq 2 ]
+if [ $choiceb -eq 2 ]
 then
 ./TusharApis/meme.sh
 fi
-if [ $choice -eq 3 ]
+if [ $choiceb -eq 3 ]
 then
 ./TusharApis/food.sh
 fi
-if [ $choice -eq 4 ]
+if [ $choiceb -eq 4 ]
 then
 ./TusharApis/cocktail.sh
 fi
@@ -118,4 +125,20 @@ fi
 if [ $choice -eq 4 ]
 then
 ./codeprakhar/powerstart.sh
+fi
+
+if [ $choice -eq 5 ]
+then
+echo "What specificaly are you interested in?"
+echo "Let's play a card game - type 1"
+echo "Want to get gisty with dictionary? Let's get started - type 2"
+read -p "Enter your choice: " choice2
+if [ $choice2 -eq 1 ]
+then
+./cardgame.sh
+fi
+if [ $choice2 -eq 2 ]
+then
+./dictionary.sh
+fi
 fi
